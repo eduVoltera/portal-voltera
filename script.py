@@ -1,6 +1,11 @@
 import pandas as pd
 
-df = pd.read_csv("data/base.csv")
+df = pd.read_csv(
+    "data/base.csv",
+    sep="\t",        # 👈 clave
+    decimal=",",     # 👈 por los valores tipo 267175,558
+    encoding="utf-8"
+)
 
 html = f"""
 <html>

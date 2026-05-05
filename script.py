@@ -1,6 +1,8 @@
 import pandas as pd
 
-df = pd.read_excel("data/base.xlsx")
+file_path = "data/base.xlsx"
+
+df = pd.read_excel(file_path, engine="openpyxl")
 
 html = f"""
 <html>
@@ -8,7 +10,7 @@ html = f"""
     <title>Portal Voltera</title>
 </head>
 <body>
-    <h1>Recaudación</h1>
+    <h1>Datos</h1>
     {df.to_html(index=False)}
 </body>
 </html>
@@ -16,3 +18,5 @@ html = f"""
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
+
+print("OK")

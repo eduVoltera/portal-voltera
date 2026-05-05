@@ -1,8 +1,6 @@
 import pandas as pd
 
-file_path = "data/base.xlsx"
-
-df = pd.read_excel(file_path, engine="openpyxl")
+df = pd.read_csv("data/base.csv")
 
 html = f"""
 <html>

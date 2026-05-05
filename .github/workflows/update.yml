@@ -2,8 +2,7 @@ name: Update HTML
 
 on:
   push:
-    paths:
-      - 'data/base.xlsx'
+  workflow_dispatch:
 
 jobs:
   build:
